@@ -10,8 +10,10 @@ const PORT = process.env.PORT!;
 
 app.use(express.json());
 app.use("/api", routes);
-app.use("/api/pokemons", pokemonRoutes); 
+app.use("/api/pokemons", pokemonRoutes);
 
-app.listen(PORT, () => {
-    console.log(`Hey! Server running on http://localhost:${PORT}`);
+const server = app.listen(PORT, () => {
+  console.log(`Hey! Server running on http://localhost:${PORT}`);
 });
+
+export { app, server };

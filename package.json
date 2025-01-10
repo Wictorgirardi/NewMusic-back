@@ -4,7 +4,9 @@
   "description": "newmusic-back",
   "main": "server.js",
   "scripts": {
-    "test": "jest"
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
